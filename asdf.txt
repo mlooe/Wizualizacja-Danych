@@ -1,0 +1,76 @@
+import numpy as np
+
+# a = np.array([1,2,3,4])
+# b = np.array([[1,2,3,4],[3,4,5,6]])
+#
+# a[[True, False, True, False]] = 0
+# print(a)
+# print(a[a>3])
+# a[a>3] = 100
+# print(a)
+
+# -------------------------------------------------------------------------------
+# Ćw 1
+
+my_array = np.array([10,12,14,16,18,20,22,24,26,28,30,32,34,36,38])
+print(my_array)
+print(my_array.shape)              # a)
+
+new_array = my_array.reshape(5,3)      # b)
+print(new_array)
+
+# np.insert(my_array, 2, 3)            # c) (nie działa)
+# print(my_array)
+
+
+filter_array = []
+for element in my_array:                      # d)
+    filter_array.append(element*2)
+
+print(filter_array)
+
+
+filter_array = []
+for element in my_array:
+    if element % 6 == 2:                              # e)
+        filter_array.append(element*0)
+    else:
+        filter_array.append(element)
+
+print(filter_array)
+
+
+def change(A, x):
+    temp = []
+    for element in A:
+        if element == 0:
+            temp.append(x)
+        else:
+            temp.append(element)
+    return temp
+
+
+A = np.array([0,2,0,0,0,6,7,8,9,0,3,3,3])
+x = 45
+
+print(change(A,x))
+
+
+# -------------------------------------------------------------------------------
+# Ćw 2
+
+A = np.array([[1,1,1], [2,1,0], [4,1,2]])
+B = np.array([2,5,7], [2,8,0], [4,3,1])
+
+
+
+
+
+
+
+
+
+
+
+
+
